@@ -22,17 +22,17 @@ def visualize_cuboid_3d(cuboid_data):
 
     for x in x_bricks:
         for y in y_bricks:
-            ax.plot([x, x], [y, y], [0, num_bricks["height"]], color='b', alpha=0.1)
+            ax.plot([x, x], [y, y], [0, num_bricks["height"]], color='r', alpha=0.1)
 
     # Plotting horizontal lines (along y-axis)
     for x in x_bricks:
         for z in z_bricks:
-            ax.plot([x, x], [0, num_bricks["width"]], [z, z], color='b', alpha=0.1)
+            ax.plot([x, x], [0, num_bricks["width"]], [z, z], color='r', alpha=0.1)
     
     # Plotting horizontal lines (along x-axis)
     for y in y_bricks:
         for z in z_bricks:
-            ax.plot([0, num_bricks["length"]], [y, y], [z, z], color='b', alpha=0.1)
+            ax.plot([0, num_bricks["length"]], [y, y], [z, z], color='r', alpha=0.1)
 
     # Set axis labels and plot title
     ax.set_xlabel('Length (25 bricks)')
@@ -109,3 +109,4 @@ if __name__ == "__main__":
     visualize_cuboid_3d(cuboid_data)
     visualize_top_view(cuboid_data)
     visualize_side_view(cuboid_data)
+
